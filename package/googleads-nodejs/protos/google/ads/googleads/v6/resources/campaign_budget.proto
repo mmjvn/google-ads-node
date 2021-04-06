@@ -80,7 +80,10 @@ message CampaignBudget {
   // The lifetime amount of the budget, in the local currency for the account.
   // Amount is specified in micros, where one million is equivalent to one
   // currency unit.
-  optional int64 total_amount_micros = 22;
+  // optional int64 total_amount_micros = 22 [default = 10];
+  oneof total_amount_micros {
+    int64 nullable_int64 = 22;
+  };
 
   // Output only. The status of this campaign budget. This field is read-only.
   google.ads.googleads.v6.enums.BudgetStatusEnum.BudgetStatus status = 6 [(google.api.field_behavior) = OUTPUT_ONLY];

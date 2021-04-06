@@ -15433,6 +15433,13 @@
                             "(google.api.resource).type": "googleads.googleapis.com/CampaignBudget",
                             "(google.api.resource).pattern": "customers/{customer_id}/campaignBudgets/{campaign_budget_id}"
                           },
+                          "oneofs": {
+                            "total_amount_micros": {
+                              "oneof": [
+                                "nullable_int64"
+                              ]
+                            }
+                          },
                           "fields": {
                             "resource_name": {
                               "type": "string",
@@ -15457,7 +15464,7 @@
                               "type": "int64",
                               "id": 21
                             },
-                            "total_amount_micros": {
+                            "nullable_int64": {
                               "type": "int64",
                               "id": 22
                             },
